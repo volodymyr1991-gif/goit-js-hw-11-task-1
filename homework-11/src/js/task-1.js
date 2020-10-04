@@ -1,11 +1,11 @@
 const delay = ms => {
-return new Promise((resolve,reject)=>{
-  setTimeout(()=>{
-resolve(ms);
-const error='Виникла помилка';
-reject(error)
-  },ms)
-})
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(ms);
+      const error = 'Виникла помилка';
+      reject(error);
+    }, ms);
+  });
 };
 
 const logger = time => console.log(`Resolved after ${time}ms`);
